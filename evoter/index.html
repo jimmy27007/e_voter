@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EVOTER | Homepage</title>
+    <link
+      rel="shortcut icon"
+      href="/evoter/systemimages/votingico.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/evoter/css/evoter.css" />
+    <script src="/evoter/js/functions.js"></script>
+    <style>
+      body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: rgba(0, 0, 0, 0.459);
+          color: #333;
+      }
+      .sys_container{
+        display: flex;
+        flex-direction: column;
+      }
+      .landing_container{
+        background-color: black;
+        margin-top: 0%;
+        position: absolute;
+        top: 100px;
+      }
+      .container {
+          width: 80%;
+          margin: auto;
+          overflow: hidden;
+      }
+      header {
+          background: #000;
+          color: #fff;
+          padding-top: 30px;
+          min-height: 70px;
+          border-bottom: #444 3px solid;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      header a {
+          color: #fff;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 16px;
+      }
+      header a:hover {
+          color: #ccc;
+      }
+      header ul {
+          padding: 0;
+          list-style: none;
+      }
+      header li {
+          float: left;
+          display: flex;
+          padding: 0 20px 0 20px;
+      }
+      header #branding {
+          float: left;
+      }
+      header #branding h1 {
+          margin: 0;
+      }
+      header nav {
+          float: right;
+          margin-top: 10px;
+      }
+      #showcase {
+          background: url('showcase.jpg') no-repeat center center/cover;
+          text-align: center;
+          color: #fff;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      #showcase h1 {
+          /* margin-top: 100px; */
+          font-size: 55px;
+          /* margin-bottom: 10px; */
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      #showcase p {
+          font-size: 20px;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+      #main {
+          padding: 20px;
+          background: #fff;
+          margin-top: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      #main h2 {
+          margin-top: 0;
+      }
+      #main p {
+          margin-bottom: 20px;
+      }
+      .btn {
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 18px;
+          color: #fff;
+          background: #000;
+          border: none;
+          border-radius: 5px;
+          text-decoration: none;
+          margin-right: 10px;
+          transition: background 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
+      }
+      .btn:hover {
+          background: #444;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          transform:scale(1.1);
+      }
+      footer {
+          padding: 20px;
+          margin-top: 20px;
+          color: #fff;
+          background-color: #000;
+          text-align: center;
+          box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+      }
+      footer ul {
+          list-style: none;
+          padding: 0;
+      }
+      footer ul li {
+          display: inline;
+          padding: 0 10px;
+      }
+      footer ul li a {
+          color: #fff;
+          text-decoration: none;
+      }
+      footer ul li a:hover {
+          color: #ccc;
+      }
+      .title_bar{
+        height: fit-content;
+        position: absolute;
+        top: 0%;
+        z-index: 5;
+      }
+  </style>
+  </head>
+  <body>
+    <div class="sys_container animatable" id="sys_container">
+      <div class="title_bar">
+        <img
+          src="/evoter/systemimages/votingico.png"
+          class="round_img"
+          id="logo_refresh"
+          onclick="refresh()"
+        />
+        <ul class="title_bar_links normal_text">
+          <li><a href="/elections.html">Elections</a></li>
+          <li><a href="/help.html">Help</a></li>
+          <li><a href="/policy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms and conditions</a></li>
+          <li><a href="/contact.html">Contact us</a></li>
+        </ul>
+        <button class="accounts_button" onmouseover="register(this)">
+          Register
+        </button>
+        <button class="accounts_button" onclick="login_page()">Login</button>
+      </div>
+      <div class="landing_container" id="landing_container">
+        <header>
+          <div class="container">
+              <div id="branding">
+                  <h1>Evoting System</h1>
+              </div>
+          </div>
+      </header>
+  
+      <section id="showcase">
+          <div class="container">
+              <h1>Welcome to the Online voting system.</h1>
+              <p>Make your voice heard by participating in the voting system.</p>
+          </div>
+      </section>
+  
+      <section id="main">
+          <div class="container">
+              <h2>Get Started</h2>
+              <p>To start voting, please sign up or log in to your account.</p>
+              <a class="btn" onmouseover="register(this)">Sign Up</a>
+              <a class="btn" onclick="login_page()">Log In</a>
+              <h2>About Our Voting System</h2>
+              <p>Our voting system is designed to be secure, transparent, and easy to use. We ensure that every vote is counted accurately and that the results are available in real-time. Join us in making your voice heard and participating in the democratic process.</p>
+              <h2>Features</h2>
+              <ul>
+                  <li>Secure and encrypted voting process</li>
+                  <li>Real-time vote counting</li>
+                  <li>User-friendly interface</li>
+                  <li>Transparent and verifiable results</li>
+              </ul>
+          </div>
+      </section>
+  
+      <footer>
+          <p>Evoter Online System &copy; 2025</p>
+          <ul>
+              <li><a href="/policy.html">Privacy Policy</a></li>
+              <li><a href="/terms.html">Terms of Service</a></li>
+              <li><a href="/help.html">Help</a></li>
+              <li><a href="/contact.html">Contact Us</a></li>
+              <li><a href="/faq.html">FAQ</a></li>
+          </ul>
+      </footer>
+      </div>
+
+    </div>
+    <!-- <div class="confirm_action_container" id="confirm_action_container">
+    
+        <div class="confirm_action">
+            <div class="confirm_icon">
+                ❓
+            </div>
+          <p class="about_confirm" id="about_confirm">Continue with action. you are about to click abutton tha will do something</p>
+          <div class="action_buttons" id="action_buttons">
+            <button class="cancel_action" id="cancel_action">Cancel</button>
+            <button class="continue_action" id="continue_action">Continue</button>
+          </div>
+        </div>
+      </div> -->
+          <script src="/evoter/js/definitions.js"></script>
+    <script src="/evoter/js/evoter.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EVOTER | login</title>
+    <link
+      rel="shortcut icon"
+      href="/evoter/systemimages/votingico.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/evoter/css/evoter.css" />
+    <script src="/evoter/js/functions.js"></script>
+  </head>
+  <body>
+    <div class="evoter_system_login animatable">
+      <div class="evoter_title">
+        <img src="/evoter/systemimages/votingico.png" alt="" />
+        <span class="title">Evoter</span>
+      </div>
+      <div class="evoter_login_form">
+        <p>Login to evoter</p>
+        <div class="login_form">
+          Voters id <br /><input
+            type="text"
+            placeholder="Voters id"
+            id="login_voters_id"
+          /><br />
+          Password<br /><input
+            type="password"
+            placeholder="Password"
+            id="login_password"
+          /><br />
+          <div class="login_sumtest">
+            <span id="login_arithmetic_test"></span>
+            <input type="text" placeholder="result" id="login_sumtest_result" />
+          </div>
+          <br />
+          <button class="login_send_code" id="login_send_code">
+            Send code
+          </button>
+          Verify your email<br />
+          <input
+            type="text"
+            placeholder="Verification code"
+            id="login_verify_email"
+          /><br />
+          <button id="login_submit_form">Login</button>
+          Not registered? <button id="register_button">Register</button>
+          <button class="forgot_password" style="color: green;" onclick="resetPassword()">Forgot password? <span style="color: blue; text-decoration: underline;">Click here</span></button>
+        </div>
+      </div>
+    </div>
+    <script src="/evoter/js/definitions.js"></script>
+    <script src="/evoter/js/login.js"></script>
+  </body>
+</html>

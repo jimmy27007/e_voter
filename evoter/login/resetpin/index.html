@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link
+    rel="shortcut icon"
+    href="/evoter/systemimages/votingico.png"
+    type="image/x-icon"
+  />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restore password</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0%;
+            margin: 0%;
+        }
+        body{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            background: rgba(0, 0, 0, 0.747);
+        }
+        .reset_password_container {
+            background-color: rgba(0, 0, 0, 0.777);
+            height: 100%;
+            width:100%;
+            box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.377);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .form{
+            max-width: 500px;
+            width: 400px;
+            min-width: 250px;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content:center;
+        }
+        .inputs{
+            width: 100%;
+            height: 40px;
+            margin-top: 20px;
+            background: white;
+            border-style: none;
+            border-bottom-style: solid;
+            outline: none;
+            color: white;
+            border-color: white;
+            font-size: 20px;
+        }
+        button{
+            margin-top: 30px;
+            background-color: black;
+            color: white;
+            outline: none;
+            border-style: none;
+            padding: 10px;
+            width: 50%;
+            font-size: 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.312);
+            }
+        }
+
+    </style>
+    <script src="/evoter/js/functions.js"></script>
+    <link rel="stylesheet" href="/evoter/css/evoter.css">
+</head>
+
+<body>
+    
+    <div class="reset_password_container" id="reset_password_container">
+        <form class="form" id="form">
+            <input class="inputs"  type="number" name="voters_id" id="voters_reset_password_id" placeholder="Enter your voter's ID" autocomplete="off">
+            <input class="inputs" type="password" name="new_password" id="new_password" placeholder="Enter new password" autocomplete="off">
+            <input class="inputs" type="password" name="confirm_new_password" id="confirm_new_password" placeholder="Confirm new password" autocomplete="off">
+            <button type="submit" id="submit">Reset</button>
+        </form>
+    </div>
+    <script>
+        document.body.style.height=window.innerHeight+"px";
+        document.body.style.width=window.innerWidth+"px";
+    </script>
+    <script src="reset.js"></script>
+</body>
+</html>

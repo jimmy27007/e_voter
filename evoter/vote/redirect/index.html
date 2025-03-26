@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting......</title>
+  </head>
+  <body>
+    <style>
+        body{
+            display: flex;
+            color: green;
+            background-color: antiquewhite;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <h1 style="font-size: 30px">Signing you in.<br>Please wait.............</h1>
+    <script>
+      setTimeout(() => {
+        window.location.href =
+          "http://" + window.location.host + "/evoter/vote/";
+      }, 2000);
+    </script>
+  </body>
+</html>
